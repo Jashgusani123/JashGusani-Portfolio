@@ -231,7 +231,7 @@ export const Route = createRootRouteWithContext<{
 
       {
         name: "twitter:image",
-        content: favicon,
+        content: "https://jashgusani.vercel.app/og-image.png",
       },
     ],
 
