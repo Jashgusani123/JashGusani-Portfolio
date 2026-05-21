@@ -18,21 +18,49 @@ export function BackgroundFX() {
 
 export function CursorGlow() {
   const [pos, setPos] = useState({ x: -200, y: -200 });
+  const [hover, setHover] = useState(false);
   useEffect(() => {
-    const onMove = (e: MouseEvent) => setPos({ x: e.clientX, y: e.clientY });
+    const onMove = (e: MouseEvent) => {
+      setPos({ x: e.clientX, y: e.clientY });
+      const el = e.target as HTMLElement | null;
+      setHover(!!el?.closest("a,button,[role='button'],input,textarea,label"));
+    };
     window.addEventListener("mousemove", onMove);
     return () => window.removeEventListener("mousemove", onMove);
   }, []);
   return (
-    <motion.div
-      className="fixed pointer-events-none z-[60] w-8 h-8 rounded-full hidden md:block"
-      style={{
-        background: "radial-gradient(circle, oklch(0.7 0.2 295 / 0.6), transparent 70%)",
-        left: pos.x - 16,
-        top: pos.y - 16,
-        mixBlendMode: "multiply",
-      }}
-    />
+    <>
+      {/* Trail halo */}
+      <motion.div
+        className="fixed pointer-events-none z-[60] rounded-full hidden md:block"
+        animate={{
+          width: hover ? 56 : 36,
+          height: hover ? 56 : 36,
+          x: pos.x - (hover ? 28 : 18),
+          y: pos.y - (hover ? 28 : 18),
+        }}
+        transition={{ type: "spring", mass: 0.4, stiffness: 180, damping: 18 }}
+        style={{
+          background: "radial-gradient(circle, rgba(213,62,15,0.35), rgba(213,62,15,0.15) 60%, transparent 75%)",
+          filter: "blur(2px)",
+        }}
+      />
+      {/* Core dot */}
+      <motion.div
+        className="fixed pointer-events-none z-[61] rounded-full hidden md:block"
+        animate={{
+          width: hover ? 14 : 10,
+          height: hover ? 14 : 10,
+          x: pos.x - (hover ? 7 : 5),
+          y: pos.y - (hover ? 7 : 5),
+        }}
+        transition={{ type: "spring", mass: 0.2, stiffness: 600, damping: 30 }}
+        style={{
+          backgroundColor: "#D53E0F",
+          boxShadow: "0 0 18px rgba(213,62,15,0.7)",
+        }}
+      />
+    </>
   );
 }
 
