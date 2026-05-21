@@ -18,12 +18,11 @@ export function Contact() {
           <p className="text-foreground/60 mb-6 text-sm">I'm available for freelance work, collaboration, and full-time opportunities.</p>
           <div className="space-y-3">
             {[
-              { Icon: Mail, label: "jash@example.com" },
-              { Icon: Github, label: "github.com/jashgusani" },
-              { Icon: Linkedin, label: "linkedin.com/in/jashgusani" },
-              { Icon: Instagram, label: "@jashgusani" },
+              { Icon: Mail, label: "Mail" , value: "gusanijash1@gmail.com" },
+              { Icon: Github, label: "GitHub" , value: "https://github.com/Jashgusani123" },
+              { Icon: Linkedin, label: "LinkedIn" , value: "https://www.linkedin.com/in/gusanijash91/" },
             ].map((it, i) => (
-              <a key={i} href="#" className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/40 transition-colors">
+              <a key={i} href={it.value} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/40 transition-colors">
                 <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center text-white">
                   <it.Icon size={16} />
                 </div>

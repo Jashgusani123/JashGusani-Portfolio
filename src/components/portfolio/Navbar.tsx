@@ -29,18 +29,12 @@ export function Navbar() {
         <a
           key={l.href}
           href={l.href}
-          className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground rounded-full hover:bg-white/40 transition-colors"
+          className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-white rounded-full hover:bg-primary/80 transition-colors"
         >
           {l.label}
         </a>
       ))}
-      <button
-        onClick={() => setDark((d) => !d)}
-        className="ml-1 p-2 rounded-full hover:bg-white/40 transition-colors"
-        aria-label="Toggle theme"
-      >
-        {dark ? <Sun size={16} /> : <Moon size={16} />}
-      </button>
+     
     </motion.nav>
   );
 }

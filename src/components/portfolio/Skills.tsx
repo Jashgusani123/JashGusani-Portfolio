@@ -2,10 +2,66 @@ import { motion } from "framer-motion";
 import { Section } from "./Section";
 
 const groups = [
-  { title: "Languages", items: ["JavaScript", "TypeScript", "Java", "Python", "MongoDB", "SQL"] },
-  { title: "Frontend", items: ["React", "Next.js", "Tailwind CSS", "Redux", "Framer Motion", "MUI"] },
-  { title: "Backend", items: ["Node.js", "Express.js", "Spring Boot", "REST APIs", "Authentication"] },
-  { title: "Tools & More", items: ["Git", "GitHub", "Firebase", "Socket.IO", "AI Tools", "npm Publishing"] },
+  {
+    title: "Languages",
+    items: [
+      "JavaScript",
+      "TypeScript",
+      "Java",
+      "Python",
+      "MongoDB",
+      "SQL",
+    ],
+  },
+
+  {
+    title: "Frontend",
+    items: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Framer Motion",
+      "MUI",
+    ],
+  },
+
+  {
+    title: "Backend",
+    items: [
+      "Node.js",
+      "Express.js",
+      "Spring Boot",
+      "REST APIs",
+      "JWT Authentication",
+      "Role-Based Access",
+    ],
+  },
+
+  {
+    title: "Tools & Platforms",
+    items: [
+      "Git",
+      "GitHub",
+      "Postman",
+      "Firebase",
+      "Google Search Console",
+      "Socket.IO",
+      "npm Publishing",
+      "AI Tools",
+    ],
+  },
+
+  {
+    title: "Creative & Media Skills",
+    items: [
+      "Reel Editing",
+      "AI Character Editing",
+      "YouTube Thumbnail Design",
+      "Short-Form Video Editing",
+      "Canva",
+    ],
+  },
 ];
 
 export function Skills() {
@@ -33,7 +89,7 @@ export function Skills() {
                   viewport={{ once: true }}
                   transition={{ delay: gi * 0.1 + i * 0.04 }}
                   whileHover={{ y: -4, scale: 1.05 }}
-                  className="px-4 py-2 rounded-full text-sm font-medium bg-white/60 border border-white/80 hover:bg-gradient-primary hover:text-white hover:border-transparent hover:shadow-glow transition-all cursor-default"
+                  className="px-4 py-2 rounded-full text-sm font-medium bg-white/60 border border-white/80 hover:bg-gradient-primary hover:text-primary hover:border-transparent hover:shadow-glow transition-all cursor-default"
                 >
                   {item}
                 </motion.div>

@@ -10,6 +10,8 @@ const projects = [
     desc: "Smart attendance management system with real-time analytics and role-based access.",
     stack: ["React", "Node.js", "MongoDB", "Socket.IO"],
     gradient: "from-purple-accent/60 to-cyan-accent/60",
+    github: "https://github.com/Jashgusani123/Attendance-System",
+    demo: "https://attendance-system-gold-six.vercel.app/",
   },
   {
     name: "Chess Online Multiplayer",
@@ -17,6 +19,8 @@ const projects = [
     desc: "Real-time multiplayer chess platform built with Socket.IO and React.",
     stack: ["React", "Socket.IO", "Express", "Node.js"],
     gradient: "from-blue-accent/60 to-purple-accent/60",
+    github: "https://github.com/Jashgusani123/Chess",
+    demo: "https://chess-t0e4.onrender.com/",
   },
   {
     name: "Snippetix",
@@ -24,6 +28,8 @@ const projects = [
     desc: "AI-powered developer resource hub with tutorials, explanations, and coding help.",
     stack: ["Next.js", "AI APIs", "Tailwind", "MongoDB"],
     gradient: "from-cyan-accent/60 to-blue-accent/60",
+    github: "https://github.com/Jashgusani123/Snippetix-Frontend",
+    demo: "https://snippetix-frontend.vercel.app/",
   },
   {
     name: "GitPusher",
@@ -31,6 +37,8 @@ const projects = [
     desc: "npm package automating GitHub pushes — used 700+ times by developers.",
     stack: ["Node.js", "CLI", "npm", "GitHub API"],
     gradient: "from-purple-accent/60 to-blue-accent/60",
+    github: "https://github.com/Jashgusani123/Gitpusher_npm_pkg",
+    demo: "https://www.npmjs.com/package/@jashg91/gitpusher",
   },
 ];
 
@@ -95,10 +103,20 @@ export function Projects() {
                   ))}
                 </div>
                 <div className="flex gap-2">
-                  <a href="#" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium glass hover:shadow-glow transition-all">
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium glass hover:shadow-glow transition-all"
+                  >
                     <Github size={14} /> GitHub
                   </a>
-                  <a href="#" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium bg-gradient-primary text-white hover:shadow-glow transition-all">
+                  <a
+                    href={p.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium bg-gradient-primary text-white hover:shadow-glow transition-all"
+                  >
                     <ExternalLink size={14} /> Live Demo
                   </a>
                 </div>
