@@ -94,7 +94,7 @@ export function Projects() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{p.name}</h3>
-                <p className="text-sm text-foreground/60 mb-4">{p.desc}</p>
+                <p className="text-sm text-foreground/80 mb-4">{p.desc}</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {p.stack.map((s) => (
                     <span key={s} className="px-2.5 py-1 rounded-full text-xs bg-secondary text-secondary-foreground font-medium">

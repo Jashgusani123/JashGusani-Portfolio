@@ -22,7 +22,7 @@ export function Section({ id, eyebrow, title, subtitle, children }: { id?: strin
               <span key={i} className={i % 2 === 1 ? "text-gradient" : ""}>{w} </span>
             ))}
           </h2>
-          {subtitle && <p className="text-foreground/60 max-w-2xl mx-auto">{subtitle}</p>}
+          {subtitle && <p className="text-foreground/80 max-w-2xl mx-auto">{subtitle}</p>}
         </motion.div>
         {children}
       </div>

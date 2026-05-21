@@ -84,7 +84,7 @@ export function Hero() {
           <p className="text-lg text-foreground/70 mb-4 max-w-xl">
             Building Real-Time Experiences, AI-Powered Solutions & Modern Web Applications.
           </p>
-          <p className="text-base text-foreground/60 mb-8 max-w-xl">
+          <p className="text-base text-foreground/80 mb-8 max-w-xl">
             I'm a Full-Stack Developer specializing in the MERN Stack and modern scalable
             applications. Passionate about real-time systems, AI integrations, and developer-focused
             tools.
@@ -114,6 +114,7 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 hover:shadow-glow transition-all"
+                aria-label={item.Icon === Github ? "GitHub Profile" : item.Icon === Linkedin ? "LinkedIn Profile" : "Email"}
               >
                 <item.Icon size={18} />
               </a>

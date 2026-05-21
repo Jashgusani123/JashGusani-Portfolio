@@ -15,14 +15,14 @@ export function Contact() {
           className="md:col-span-2 glass rounded-3xl p-8 shadow-soft"
         >
           <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Get in touch</h3>
-          <p className="text-foreground/60 mb-6 text-sm">I'm available for freelance work, collaboration, and full-time opportunities.</p>
+          <p className="text-foreground/80 mb-6 text-sm">I'm available for freelance work, collaboration, and full-time opportunities.</p>
           <div className="space-y-3">
             {[
               { Icon: Mail, label: "Mail" , value: "gusanijash1@gmail.com" },
               { Icon: Github, label: "GitHub" , value: "https://github.com/Jashgusani123" },
               { Icon: Linkedin, label: "LinkedIn" , value: "https://www.linkedin.com/in/gusanijash91/" },
             ].map((it, i) => (
-              <a key={i} href={it.value} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/40 transition-colors">
+              <a key={i} href={it.value} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/40 transition-colors" aria-label={it.Icon === Github ? "GitHub Profile" : it.Icon === Linkedin ? "LinkedIn Profile" : "Email"}>
                 <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center text-white">
                   <it.Icon size={16} />
                 </div>
@@ -63,7 +63,7 @@ function Field({ label, id, type = "text", textarea }: { label: string; id: stri
       ) : (
         <input id={id} type={type} placeholder=" " className={cls} required />
       )}
-      <label htmlFor={id} className="absolute left-4 top-2 text-xs font-medium text-foreground/60 pointer-events-none">
+      <label htmlFor={id} className="absolute left-4 top-2 text-xs font-medium text-foreground/80 pointer-events-none">
         {label}
       </label>
     </div>
