@@ -23,9 +23,7 @@ function NotFoundComponent() {
         <div className="max-w-md text-center">
           <h1 className="text-7xl font-bold text-foreground">404</h1>
 
-          <h2 className="mt-4 text-xl font-semibold text-foreground">
-            Page not found
-          </h2>
+          <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
 
           <p className="mt-2 text-sm text-muted-foreground">
             The page you're looking for doesn't exist or has been moved.
@@ -59,13 +57,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({
-  error,
-  reset,
-}: {
-  error: Error;
-  reset: () => void;
-}) {
+function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
 
   const router = useRouter();
@@ -81,8 +73,7 @@ function ErrorComponent({
           </h1>
 
           <p className="mt-2 text-sm text-muted-foreground">
-            Something went wrong on our end. You can try refreshing or head back
-            home.
+            Something went wrong on our end. You can try refreshing or head back home.
           </p>
 
           <div className="mt-6 flex flex-wrap justify-center gap-3">
@@ -152,8 +143,7 @@ export const Route = createRootRouteWithContext<{
       },
 
       {
-        title:
-          "Jash Gusani — Full-Stack Developer & AI Integration Enthusiast",
+        title: "Jash Gusani — Full-Stack Developer & AI Integration Enthusiast",
       },
 
       {
@@ -172,7 +162,10 @@ export const Route = createRootRouteWithContext<{
         name: "author",
         content: "Jash Gusani",
       },
-
+      {
+        name: "google-site-verification",
+        content: "LEcuQz9qY_TqMDAziK7u7xykoTLIW7JqSn_mrX3MPkM",
+      },
       {
         name: "robots",
         content: "index, follow",
@@ -186,8 +179,7 @@ export const Route = createRootRouteWithContext<{
       /* Open Graph */
       {
         property: "og:title",
-        content:
-          "Jash Gusani — Full-Stack Developer & AI Integration Enthusiast",
+        content: "Jash Gusani — Full-Stack Developer & AI Integration Enthusiast",
       },
 
       {
@@ -219,8 +211,7 @@ export const Route = createRootRouteWithContext<{
 
       {
         name: "twitter:title",
-        content:
-          "Jash Gusani — Full-Stack Developer & AI Integration Enthusiast",
+        content: "Jash Gusani — Full-Stack Developer & AI Integration Enthusiast",
       },
 
       {
@@ -274,8 +265,7 @@ export const Route = createRootRouteWithContext<{
 
       {
         rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap",
       },
     ],
   }),
@@ -289,11 +279,7 @@ export const Route = createRootRouteWithContext<{
   errorComponent: ErrorComponent,
 });
 
-function RootShell({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+function RootShell({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
