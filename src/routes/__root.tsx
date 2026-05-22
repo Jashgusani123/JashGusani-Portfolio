@@ -155,6 +155,12 @@ export const Route = createRootRouteWithContext<{
       },
 
       {
+        name: "title",
+        content:
+          "Jash Gusani — Full-Stack Developer & AI Integration Enthusiast",
+      },
+
+      {
         name: "description",
         content:
           "Portfolio of Jash Gusani — Full-Stack Developer building real-time experiences, AI-powered solutions, modern web applications, and developer-focused tools.",
@@ -163,7 +169,7 @@ export const Route = createRootRouteWithContext<{
       {
         name: "keywords",
         content:
-          "Jash Gusani, Full Stack Developer, React Developer, MERN Stack Developer, AI Integration, Portfolio Website, JavaScript Developer, Node.js Developer",
+          "Jash Gusani, Full Stack Developer, MERN Stack Developer, React Developer, Node.js Developer, AI Integration, Portfolio Website",
       },
 
       {
@@ -264,6 +270,12 @@ export const Route = createRootRouteWithContext<{
       /* Favicon */
       {
         rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico",
+      },
+
+      {
+        rel: "shortcut icon",
         href: "/favicon.ico",
       },
 
