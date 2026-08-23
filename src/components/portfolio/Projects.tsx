@@ -31,7 +31,7 @@ const projects = [
     github: "https://github.com/Jashgusani123/Snippetix-Frontend",
     demo: "https://snippetix-frontend.vercel.app/",
   },
-  {
+ {
     name: "GitPusher",
     tag: "Open Source",
     desc: "npm package automating GitHub pushes — used 700+ times by developers.",
@@ -39,6 +39,15 @@ const projects = [
     gradient: "from-purple-accent/60 to-blue-accent/60",
     github: "https://github.com/Jashgusani123/Gitpusher_npm_pkg",
     demo: "https://www.npmjs.com/package/@jashg91/gitpusher",
+  },
+  {
+    name: "Codescope",
+    tag: "Open Source",
+    desc: "AI-powered CLI that lets you ask questions about any codebase — parses code with tree-sitter and answers using local, offline AI via Ollama.",
+    stack: ["Node.js", "CLI", "Tree-sitter", "Ollama", "RAG", "Vector DB"],
+    gradient: "from-green-accent/60 to-cyan-accent/60",
+    github: "https://github.com/Jashgusani123/codescope",
+    demo: "https://www.npmjs.com/package/@jashg91/codescope",
   },
 ];
 
